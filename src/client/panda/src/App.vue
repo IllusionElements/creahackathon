@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/panda.jpg" height="300">
+    
     <router-view/>
+    <img src="./assets/panda.jpg" height="300">
   </div>
 </template>
 
