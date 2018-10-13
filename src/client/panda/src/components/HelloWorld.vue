@@ -1,86 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <a v-on:click="dontdoit()">Please dude don't click on this!!!!</a>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <h3>{{ instruction }}</h3>
+    <div class="search">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Location" aria-label="location" aria-describedby="basic-addon2" id="searchbar">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" v-on:click="goButtonClicked()" type="button" id = "gobutton">Go!</button>
+          </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -92,7 +22,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Panda, your personal assistant for housing service'
+      msg: 'Welcome to Panda, your personal assistant for housing service',
+      instruction: 'Enter a city,'
     }
   },
   methods: {
@@ -105,6 +36,9 @@ export default {
     */
 
     dontdoit() {
+      router.push({ name: "Page2"});
+    },
+    goButtonClicked() {
       router.push({ name: "Page2"});
     }
   }
@@ -126,5 +60,15 @@ li {
 }
 a {
   color: #42b983;
+}
+.search {
+  display: inline-block;
+}
+#searchbar {
+  width:1000px;
+  height:45px;
+}
+#gobutton {
+  height:45px;
 }
 </style>
