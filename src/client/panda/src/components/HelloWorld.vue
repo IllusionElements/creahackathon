@@ -39,6 +39,10 @@ export default {
       router.push({ name: "Page2"});
     },
     goButtonClicked() {
+      if (document.getElementById("searchbar").value != "") {
+        // Extract input value (city) -> add to query
+        console.log(document.getElementById("searchbar").value);
+      }
       router.push({ name: "Page2"});
     }
   }
@@ -51,7 +55,7 @@ h1, h2 {
   font-weight: normal;
 }
 h3 {
-  margin-top:100px;
+  margin-top:60px;
 }
 ul {
   list-style-type: none;
@@ -66,7 +70,7 @@ a {
 }
 .search {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 #searchbar {
   width:1000px;
