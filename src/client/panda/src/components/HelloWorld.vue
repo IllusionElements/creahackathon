@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <router-link to="/page2">Please dude don't click on this!!!!</router-link>
+    <a v-on:click="dontdoit()">Please dude don't click on this!!!!</a>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -85,11 +85,27 @@
 </template>
 
 <script>
+
+import router from "../router"
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Panda, your personal assistant for housing service'
+    }
+  },
+  methods: {
+    /*servercall(weblink, if successful(userdata)
+    {
+      router.push({name: "Page2", params: {json:userdata}});
+    }, else fail
+      router.push(404page);
+    )
+    */
+
+    dontdoit() {
+      router.push({ name: "Page2"});
     }
   }
 }
