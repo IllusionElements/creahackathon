@@ -14,15 +14,26 @@ export default {
     }
   },
   created() {
-
     //initialize data set for this page
     this.vars = {
       data : this.$route.params.houseid,
+      latlngArray : [],
+      googleLatLng : [],
+    }
+    this.vars.latlngArray[0] = {x: 51.508742, y: -0.120850}
+    this.vars.latlngArray[1] = {x: 48.522382, y: -0.151292}
+    this.vars.latlngArray[2] = {x: 52.394490, y: -0.145968}
+
+    for (var i = 0; i < this.vars.latlngArray.length; i++)
+    {
+      this.vars.googleLatLng[i] = new google.maps.LatLng(this.vars.latlngArray[i].x, this.vars.latlngArray[i].y)
     }
   },
   mounted() {
+    
     var mapCanvas = document.getElementById("googleMap");
-    var mapCenter = new google.maps.LatLng(51.508742,-0.120850);
+    var mapCenter = this.vars.googleLatLng[0];
+
     var mapOptions = {center: mapCenter, zoom: 5}
     var map = new google.maps.Map(mapCanvas, mapOptions)
     //var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
@@ -32,7 +43,19 @@ export default {
       icon: image,
       animation: google.maps.Animation.BOUNCE
     });
+
+    var marker2 = new google.maps.Marker({
+      position: this.vars.googleLatLng[1],
+      icon: image,
+    });
+
+    var marker3 = new google.maps.Marker({
+      position: this.vars.googleLatLng[2],
+      icon: image,
+    })
     marker.setMap(map);
+    marker2.setMap(map);
+    marker3.setMap(map);
   },
 }
 </script>
