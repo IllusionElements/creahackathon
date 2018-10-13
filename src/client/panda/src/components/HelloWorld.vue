@@ -2,6 +2,7 @@
 
   <div class="hello">
     <div class="jumbotron">
+    <img src="../assets/pandaicon.png" height="300"> 
     <h1>{{ msg }}</h1>
     </div>
     <h3>{{ instruction }}</h3>
@@ -11,6 +12,7 @@
             <button type="button" class="btn btn-info" v-on:click="goButtonClicked()" id="gobutton">Go!</button>
       </div>
     </div>
+    <h4 id="foot">© panda squad</h4>
   </div>
 </template>
 
@@ -22,8 +24,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Find the right property for you',
-      instruction: 'Enter a city,'
+      msg: 'Find the right property for you!',
+      instruction: 'Please enter a city to start your search 🏡,'
     }
   },
   methods: {
@@ -79,6 +81,9 @@ a {
 #gobutton {
   height:45px;
   width:100px;
+}
+#foot {
+  margin-top: 300px;
 }
 
 </style>
