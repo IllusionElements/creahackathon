@@ -1,16 +1,16 @@
 <template>
+
   <div class="hello">
+    <div class="jumbotron">
     <h1>{{ msg }}</h1>
+    </div>
     <h3>{{ instruction }}</h3>
     <div class="search">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Location" aria-label="location" aria-describedby="basic-addon2" id="searchbar">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" v-on:click="goButtonClicked()" type="button" id = "gobutton">Go!</button>
-          </div>
+      <div class="input-group">
+        <input class="form-control" placeholder="Location" aria-label="location" id="searchbar">
+            <button type="button" class="btn btn-info" v-on:click="goButtonClicked()" id="gobutton">Go!</button>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Panda, your personal assistant for housing service',
+      msg: 'Find the right property for you',
       instruction: 'Enter a city,'
     }
   },
@@ -39,6 +39,10 @@ export default {
       router.push({ name: "Page2"});
     },
     goButtonClicked() {
+      if (document.getElementById("searchbar").value != "") {
+        // Extract input value (city) -> add to query
+        console.log(document.getElementById("searchbar").value);
+      }
       router.push({ name: "Page2"});
     }
   }
@@ -49,6 +53,9 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+}
+h3 {
+  margin-top:60px;
 }
 ul {
   list-style-type: none;
@@ -63,6 +70,7 @@ a {
 }
 .search {
   display: inline-block;
+  margin-top: 60px;
 }
 #searchbar {
   width:1000px;
@@ -70,5 +78,7 @@ a {
 }
 #gobutton {
   height:45px;
+  width:100px;
 }
+
 </style>

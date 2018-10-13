@@ -2,7 +2,7 @@
   <div id="app">
     
     <router-view/>
-    <img src="./assets/panda.jpg" height="300">
+    <!-- <img src="./assets/panda.jpg" height="300"> -->
   </div>
 </template>
 
