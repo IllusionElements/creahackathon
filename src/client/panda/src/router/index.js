@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import PageTwo from "@/components/page2"
+import MapDisplay from "@/components/MapDisplay"
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/page2',
       name: 'Page2',
       component: PageTwo
+    },
+    {
+      path: '/map',
+      name: 'Map',
+      component: MapDisplay
     }
   ]
 })
