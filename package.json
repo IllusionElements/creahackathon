@@ -1,0 +1,27 @@
+{
+  "name": "crea",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.55",
+    "meteor-node-stubs": "^0.4.1",
+    "@types/graphql": "^14.0.1",
+    "apollo-server": "^2.1.0",
+    "graphql": "^0.13.1",
+    "graphql-tag": "^2.10.0",
+    "immer": "^1.7.2",
+    "lodash.merge": "^4.6.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "src/client/main.js",
+      "server": "src/server/main.js"
+    },
+    "testModule": "src/tests/main.js"
+  }
+}
