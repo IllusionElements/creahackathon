@@ -1,7 +1,39 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div id="googleMap" style="width:100%; height:400px;"></div>
+    <div style="text-align: center;">
+      <div id="googleMap" style="display: inline-block; width:80%; height:500px;"></div>
+    </div>
+    
+    <div class="w3-row-padding row" style="text-align: center; margin-top:40px; margin-bottom: 40px">
+      <div class="w3-col m4 w3-center" id="location2">
+        <div class="w3-card" style="width:100%">
+          <img src="../assets/PANDAAAA.jpg" style="width:100%">
+          <div class="w3-container">
+            <h4><b>PANDA</b></h4>
+            <p>The panda of the panda</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-center" id="location1">
+        <div class="w3-card" style="width:100%">
+          <img src="../assets/PANDAAAA.jpg" style="width:100%">
+          <div class="w3-container">
+            <h4><b>PANDA</b></h4>
+            <p>The panda of the panda</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-center" id="location3">
+        <div class="w3-card" style="width:100%">
+          <img src="../assets/PANDAAAA.jpg" style="width:100%">
+          <div class="w3-container">
+            <h4><b>PANDA</b></h4>
+            <p>The panda of the panda</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,11 +70,17 @@ export default {
     var map = new google.maps.Map(mapCanvas, mapOptions)
     //var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
     var image = "https://image.ibb.co/gfMgDp/pandapointersmall.png";
+    var imageshadow = "https://image.ibb.co/fkOiR9/pandapointersmallshadow.png";
+    var imagepin = "https://image.ibb.co/njaKzU/pandapointersmallpin.png";
     var marker = new google.maps.Marker({
       position: mapCenter,
-      icon: image,
+      icon: imagepin,
       animation: google.maps.Animation.BOUNCE
     });
+    var markershadow = new google.maps.Marker({
+      position: mapCenter,
+      icon: imageshadow,
+    })
 
     var marker2 = new google.maps.Marker({
       position: this.vars.googleLatLng[1],
@@ -54,6 +92,7 @@ export default {
       icon: image,
     })
     marker.setMap(map);
+    markershadow.setMap(map);
     marker2.setMap(map);
     marker3.setMap(map);
   },
