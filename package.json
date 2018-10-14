@@ -14,6 +14,7 @@
     "graphql": "^0.13.1",
     "graphql-tag": "^2.10.0",
     "immer": "^1.7.2",
+    "jest": "^23.6.0",
     "lodash.merge": "^4.6.1",
     "meteor-node-stubs": "^0.4.1",
     "prettier": "^1.14.3",
@@ -27,9 +28,12 @@
     "testModule": "src/tests/main.js"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-meteor": "^0.4.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.24.1"
   }
 }
