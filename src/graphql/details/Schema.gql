@@ -1,0 +1,4 @@
+type Details @mongo(name: "details") {
+  _id: ID!
+  listing: Listing @link(field: "ListingID")
+}

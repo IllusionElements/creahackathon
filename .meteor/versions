@@ -9,6 +9,10 @@ caching-compiler@1.2.0
 caching-html-compiler@1.1.3
 callback-hook@1.1.0
 check@1.3.1
+cultofcoders:apollo@0.7.8
+cultofcoders:grapher@1.3.7_4
+cultofcoders:grapher-schema-directives@0.1.8
+dburles:mongo-collection-instances@0.3.5
 ddp@1.4.0
 ddp-client@2.3.3
 ddp-common@1.4.0
@@ -24,11 +28,14 @@ ejson@1.1.0
 es5-shim@4.8.0
 fetch@0.1.0
 geojson-utils@1.0.10
+herteby:denormalize@0.6.5
 html-tools@1.0.11
 htmljs@1.0.11
 id-map@1.1.0
 inter-process-messaging@0.1.0
+lai:collection-extensions@0.2.1_1
 logging@1.1.20
+matb33:collection-hooks@0.8.4
 meteor@1.9.2
 minifier-css@1.4.0
 minifier-js@2.4.0
@@ -44,8 +51,10 @@ npm-mongo@3.1.1
 ordered-dict@1.1.0
 promise@0.11.1
 random@1.1.0
+reactive-var@1.0.11
 reload@1.2.0
 retry@1.1.0
+reywood:publish-composite@1.5.2
 routepolicy@1.1.0
 server-render@0.3.1
 shell-server@0.4.0
@@ -54,7 +63,9 @@ spacebars-compiler@1.1.3
 standard-minifier-css@1.5.1
 standard-minifier-js@2.4.0
 static-html@1.2.2
+swydo:graphql@0.4.0
 templating-tools@1.1.2
+tmeasday:check-npm-versions@0.3.2
 tracker@1.2.0
 underscore@1.0.10
 webapp@1.7.0

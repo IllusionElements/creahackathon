@@ -2,7 +2,6 @@ export default {
   Query: {
     uniqueCities: async (...args) => {
       const [, ,
-
         {
           db: { listings },
           services: { listingService },

@@ -1,0 +1,8 @@
+interface Node {
+  _id: ID!
+}
+
+interface Geo {
+  x: Int!
+  y: Int!
+}

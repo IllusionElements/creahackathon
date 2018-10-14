@@ -1,8 +1,35 @@
 type City implements Node {
-  _id: ID!
+  id: ID!
   city: String!
 }
 
+enum ScoreTypes {
+  pedestrian_friendly
+  transit_friendly
+  car_friendly
+  groceries
+  primary_schools
+  high_schools
+  daycares
+  parks
+  restaurants
+  cafes
+  shopping
+  nightlife
+  quiet
+  vibrant
+  POP
+  AGE
+}
+
+input Score {
+  key: ScoreTypes
+  value: Int
+}
+
 extend type Query {
-  uniqueCities: [String!]!
+  uniqueCities: [City!]!
+  findListing(id: ID!): [Listing!]!
+  getAllListings: [Listing!]!
+  listingBasedOnScores(scores: [Score]): [Listing]
 }

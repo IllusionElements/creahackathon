@@ -1,0 +1,58 @@
+type Listings implements Node @mongo(name: "listings") {
+  _id: ID!
+  ListingID: ID!
+  MLSNumber: String
+  details: Details @link(to: "listing")
+  scores: Score @link(to: "listings")
+  MLSNumber: String!
+  OrganizationIDs: String!
+  Latitude: Float!
+  Longitude: Float!
+  Address: String
+  City: String
+  HasAcreage: Boolean! @bit
+  HasAirConditioning: Boolean! @bit
+  AmenitiesNearby: String
+  Bathrooms: Int
+  Bedrooms: Int
+  BuildingAmenities: String
+  BuildingType: Int
+  BusinessType: String
+  ClearCeilingHeight: String
+  CommunityName_EN: String
+  CommunityName_FR: String
+  ConstructionStyle: Int
+  Features: String
+  HasFireplace: Boolean! @bit
+  HasGarage: Boolean! @bit
+  LandSizeMin: Float
+  LandSizeMax: Float
+  LeasePrice: Float
+  LoadingType: String
+  ParkingSpaces: Int
+  HasPool: Boolean! @bit
+  SalePrice: Float
+  PropertyType: String!
+  SizeExterior: Float
+  SizeInterior: Float
+  StoriesMin: Float
+  StoriesMax: Float
+  PropertyViewType: String
+  HasVirtualTour: Boolean! @bit
+  HasWaterfront: Boolean! @bit
+  ZoningType: Int
+  InsertedDate: Int!
+  ListingLastUpdated: Date!
+  PostalCode: String
+  CropType: String
+  FarmType: String
+  LivestockType: String
+  LandUseType: String
+  BusinessSubType: String
+  UtilitiesAvailable: String
+  IndividualIDs: String
+  Keywords_EN: String
+  GeoLocation: Geography
+  IsResidential: Boolean! @bit
+  IsCommercial: Boolean! @bit
+}

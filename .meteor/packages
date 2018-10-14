@@ -14,3 +14,5 @@ shell-server@0.4.0            # Server-side component of the `meteor shell` comm
 webapp@1.7.0                  # Serves a Meteor app over HTTP
 server-render@0.3.1           # Support for server-side rendering
 mongo
+cultofcoders:apollo
+swydo:graphql

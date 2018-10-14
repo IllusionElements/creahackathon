@@ -1,0 +1,10 @@
+directive bit ON FIELD_DECLARATION
+
+enum NumberTypes {
+  INT
+  FLOAT
+}
+
+directive to(
+  type: NumberTypes!
+) ON FIELD_DECLARATION
