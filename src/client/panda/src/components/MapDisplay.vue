@@ -1,10 +1,11 @@
 <template>
   <div class="hello">
+    <div style="position: absolute; top: 70px; left: 10px" @click="lastpage()"><img style="height: 50px;" src="../assets/back.png"/> </div>
+    <div style="position: absolute; top: 70px; right: 10px" @click="refresh()"><img style="height: 50px;" src="../assets/refresh.png"/> </div> 
     <h1>{{ msg }}</h1>
     <div style="text-align: center;">
       <div id="googleMap" style="display: inline-block; width:80%; height:500px;"></div>
     </div>
-    
     <div class="w3-row-padding row" style="text-align: center; margin-top:40px; margin-bottom: 40px">
       <div class="w3-col m4 w3-center" id="location2">
         <div class="w3-card" style="width:100%">
@@ -50,6 +51,7 @@ export default {
     //initialize data set for this page
     this.vars = {
       data : this.$route.params.houseid,
+      location: this.$route.params.location,
       latlngArray : [],
       googleLatLng : [],
       imageInfo: [],
@@ -115,6 +117,14 @@ export default {
       loc[i].getElementsByClassName("displayimage")[0].setAttribute("src", this.vars.imageInfo[i]);
     }
   },
+  methods: {
+    lastpage() {
+      router.push({ name: "Page2", params: { location : this.vars.location }})
+    },
+    refresh(){
+      alert("you refreshed!!!!!!!!!!");
+    }
+  }
 }
 </script>
 
