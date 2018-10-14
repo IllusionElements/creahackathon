@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import router from "../router"
 
 var q1 = {
   question: "Bedrooms",

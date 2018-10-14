@@ -9,8 +9,8 @@
     <form autocomplete="off" action="/action_page.php">
     <div class="search">
       <div class="input-group">
-        <input class="form-control" placeholder="Location" aria-label="location" id="searchbar">
-            <button type="button" class="btn btn-info" v-on:click="goButtonClicked()" id="gobutton">Go!</button>
+        <input class="form-control" placeholder="Enter a location" aria-label="location" id="searchbar">
+        <button type="button" class="btn btn-info" v-on:click="goButtonClicked()" id="gobutton">Go!</button>
       </div>
     </div>
     </form>
@@ -69,8 +69,8 @@ function autocomplete(inp, arr) {
       currentFocus = -1;
       /*create a DIV element that will contain the items (values):*/
       a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocomplete-list");
-      a.setAttribute("class", "autocomplete-items");
+      a.setAttribute("id", this.id + "input-group-list");
+      a.setAttribute("class", "input-group-items");
       /*append the DIV element as a child of the autocomplete container:*/
       this.parentNode.appendChild(a);
       /*for each item in the array...*/
@@ -98,7 +98,7 @@ function autocomplete(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
-      var x = document.getElementById(this.id + "autocomplete-list");
+      var x = document.getElementById(this.id + "input-group-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
         /*If the arrow DOWN key is pressed,
@@ -129,18 +129,18 @@ function autocomplete(inp, arr) {
     if (currentFocus >= x.length) currentFocus = 0;
     if (currentFocus < 0) currentFocus = (x.length - 1);
     /*add class "autocomplete-active":*/
-    x[currentFocus].classList.add("autocomplete-active");
+    x[currentFocus].classList.add("input-group-active");
   }
   function removeActive(x) {
     /*a function to remove the "active" class from all autocomplete items:*/
     for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove("autocomplete-active");
+      x[i].classList.remove("input-group-active");
     }
   }
   function closeAllLists(elmnt) {
     /*close all autocomplete lists in the document,
     except the one passed as an argument:*/
-    var x = document.getElementsByClassName("autocomplete-items");
+    var x = document.getElementsByClassName("input-group-items");
     for (var i = 0; i < x.length; i++) {
       if (elmnt != x[i] && elmnt != inp) {
       x[i].parentNode.removeChild(x[i]);
@@ -175,12 +175,12 @@ li {
 a {
   color: #42b983;
 }
-.search {
+.input-group {
   display: inline-block;
   margin-top: 60px;
   position: relative;
 }
-.search-items {
+.input-group-items {
   position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
@@ -191,17 +191,17 @@ a {
   left: 0;
   right: 0;
 }
-.search-items div {
+.input-group-items div {
   padding: 10px;
   cursor: pointer;
   background-color: #fff; 
   border-bottom: 1px solid #d4d4d4; 
 }
-.search-items div:hover {
+.input-group-items div:hover {
   /*when hovering an item:*/
   background-color: #e9e9e9; 
 }
-.search-active {
+.input-group-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important; 
   color: #ffffff; 
