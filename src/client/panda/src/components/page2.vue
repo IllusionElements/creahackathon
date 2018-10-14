@@ -36,19 +36,19 @@ var q2 = {
   optional: false
 };
 
-// var q3 = {
-//   question: "Size of Yard",
-//   options: ["Large","Medium","Small"],
-//   answer: [],
-//   optional: false
-// };
+var q3 = {
+  question: "Size of Yard",
+  options: ["Large","Medium","Small"],
+  answer: [],
+  optional: false
+};
 
-// var q4 = {
-//   question: "Network Connectivity",
-//   options: ["Strong","Weak"],
-//   answer: [],
-//   optional: false
-// };
+var q4 = {
+  question: "Network Connectivity",
+  options: ["Strong","Weak"],
+  answer: [],
+  optional: false
+};
 
 var q5 = {
   question: "How many bathrooms do you need?",
@@ -123,13 +123,24 @@ export default {
       nextQuestion();
     },
     showButtonClicked() {
-      /*servercall(weblink, if successful(userdata)
-    {
-      router.push({name: "Page2", params: {json:userdata}});
-    }, else fail
-      router.push(404page);
-    )
-    */
+      /*this.ajaxRequest = true
+      this.$http.post('http://localhost:3000/graphql', {
+        bedrooms: 2,
+        bathrooms: 2,
+        pool: true,
+        leisure: {cafe: false, park: true},
+        transportation: { transit: true, car: false, pedestrain: true},
+        kids: true,
+      }, function(data, status, request)
+      {
+        this.postResults = data;
+        console.log(data);
+        this.ajaxRequest = false;
+        router.push({ name: "Map", params: { location : this.vars.location, data: data }});
+      });
+*/
+
+
       //call the post request so that data will be from the server
       router.push({ name: "Map", params: { location : this.vars.location }});
     }
