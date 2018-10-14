@@ -26,7 +26,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Find the right property for you!',
+      msg: 'Find the right residential property for you!',
       instruction: 'Please enter a city to start your search 🏡,'
     }
   },
