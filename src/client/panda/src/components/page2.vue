@@ -131,7 +131,7 @@ export default {
     )
     */
       //call the post request so that data will be from the server
-      router.push({ name: "Map"});
+      router.push({ name: "Map", params: { location : this.vars.location }});
     }
   }
 }
