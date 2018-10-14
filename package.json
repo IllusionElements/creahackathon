@@ -32,10 +32,13 @@
     "lodash.merge": "^4.6.1",
     "meteor-node-stubs": "^0.4.1",
     "prettier": "^1.14.3",
+    "react": "^16.5.2",
     "react-apollo": "^2.2.4",
+    "react-dom": "^16.5.2",
     "subscriptions-transport-ws": "^0.9.15",
     "uuid": "^3.3.2",
-    "vue": "2.5.17"
+    "vue": "2.5.17",
+    "vuera": "^0.2.3"
   },
   "meteor": {
     "mainModule": {
