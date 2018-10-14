@@ -22,6 +22,7 @@
 import router from "../router"
 
 
+
 var q1 = {
   question: "How many bedrooms do you need?",
   options: ["1","2","3","4","5"],
@@ -31,24 +32,23 @@ var q1 = {
 
 var q2 = {
   question: "Pool",
-  options: ["Yes","No"],
-  answer: [],
+  options: [1,0],
   optional: false
 };
 
-var q3 = {
-  question: "Size of Yard",
-  options: ["Large","Medium","Small"],
-  answer: [],
-  optional: false
-};
+// var q3 = {
+//   question: "Size of Yard",
+//   options: ["Large","Medium","Small"],
+//   answer: [],
+//   optional: false
+// };
 
-var q4 = {
-  question: "Network Connectivity",
-  options: ["Strong","Weak"],
-  answer: [],
-  optional: false
-};
+// var q4 = {
+//   question: "Network Connectivity",
+//   options: ["Strong","Weak"],
+//   answer: [],
+//   optional: false
+// };
 
 var q5 = {
   question: "How many bathrooms do you need?",
@@ -59,7 +59,7 @@ var q5 = {
 
 var q6 = {
   question: "Do you prefer a stroll down the street or to a park?",
-  options: ["Street","Park"],
+  options: ["Street", "Park"],
   answer: [],
   optional: true
 };
@@ -73,7 +73,7 @@ var q7 = {
 
 var q8 = {
   question: "Do you take public transit or drive to work?",
-  options: ["Public Transit","Drive"],
+  options: ["Public Transit", "Drive", "neither"],
   answer: [],
   optional: true
 };
@@ -167,7 +167,8 @@ function nextQuestion() {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -183,20 +184,20 @@ li {
 } */
 
 #optionsDrop {
-  width:200px;
-  height:45px;
+  width: 200px;
+  height: 45px;
 }
 
 #nextbutton {
-  height:45px;
-  width:100px;
+  height: 45px;
+  width: 100px;
 }
 #showbutton {
-  height:45px;
-  width:100px;
+  height: 45px;
+  width: 100px;
 }
 #bothbutton {
-  height:45px;
-  width:100px;
+  height: 45px;
+  width: 100px;
 }
 </style>
