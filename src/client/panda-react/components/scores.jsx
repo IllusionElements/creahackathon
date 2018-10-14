@@ -1,3 +1,4 @@
+import React from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
@@ -18,23 +19,3 @@ const GET_SCORES = gql`
     }
   }
 `
-
-type Median = {
-  income: number
-  delta: number
-}
-
-type Lifestyle = {
-  category: string,
-  scoreRatio: number,
-}
-
-type Statistics = {
-  median: Median,
-  averageAge: number
-}
-
-interface Scores {
-  statistics: Statistics
-  lifestyle: Lifestyle
-}

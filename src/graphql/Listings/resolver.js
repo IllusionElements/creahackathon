@@ -17,9 +17,18 @@ const resolvers = {
       console.log(typeof cities[0].id)
       return cities
     },
+    listings: (_, { answers }, { db: { locations }, services }, ast) => {
+      const {
+        bedrooms,
+        bathrooms,
+        pool,
+        leisure: { cafe, park },
+        transportation: { transit, car, pedestrian },
+        kids,
+      } = answers
+    },
   },
 }
-
 load({
   typeDefs,
   resolvers,

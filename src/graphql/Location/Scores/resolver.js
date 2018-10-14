@@ -5,5 +5,6 @@ load({
   typeDefs,
   resolvers: {
     Score: {},
+    Query: {},
   },
 })
