@@ -77,6 +77,14 @@ export default {
       nextQuestion();
     },
     showButtonClicked() {
+      /*servercall(weblink, if successful(userdata)
+    {
+      router.push({name: "Page2", params: {json:userdata}});
+    }, else fail
+      router.push(404page);
+    )
+    */
+      //call the post request so that data will be from the server
       router.push({ name: "Map"});
     }
   }

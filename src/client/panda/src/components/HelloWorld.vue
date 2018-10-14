@@ -35,13 +35,6 @@ export default {
     autocomplete(document.getElementById("searchbar"), countries);
   },
   methods: {
-    /*servercall(weblink, if successful(userdata)
-    {
-      router.push({name: "Page2", params: {json:userdata}});
-    }, else fail
-      router.push(404page);
-    )
-    */
     goButtonClicked() {
       if (document.getElementById("searchbar").value != "") {
         // Extract input value (city) -> add to query
