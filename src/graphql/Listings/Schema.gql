@@ -18,8 +18,7 @@ type Listings implements Node @mongo(name: "listings") {
   BuildingType: Int
   BusinessType: String
   ClearCeilingHeight: String
-  CommunityName_EN: String
-  CommunityName_FR: String
+  Community: String
   ConstructionStyle: Int
   Features: String
   HasFireplace: Boolean! @bit
@@ -50,8 +49,7 @@ type Listings implements Node @mongo(name: "listings") {
   BusinessSubType: String
   UtilitiesAvailable: String
   IndividualIDs: String
-  Keywords_EN: String
-  GeoLocation: Geography
+  Keywords: String
   IsResidential: Boolean! @bit
   IsCommercial: Boolean! @bit
 }
