@@ -2,7 +2,7 @@
 
   <div class="hello">
     <div class="jumbotron">
-    <img src="../assets/pandaicon.png" height="300"> 
+    <img src="../assets/pandaicon.png" height="300">
     <h1>{{ msg }}</h1>
     </div>
     <h3>{{ instruction }}</h3>
@@ -35,14 +35,6 @@ export default {
     autocomplete(document.getElementById("searchbar"), countries);
   },
   methods: {
-    /*servercall(weblink, if successful(userdata)
-    {
-      router.push({name: "Page2", params: {json:userdata}});
-    }, else fail
-      router.push(404page);
-    )
-    */
-
     dontdoit() {
       router.push({ name: "Page2"});
     },
@@ -193,19 +185,19 @@ a {
 }
 .input-group-items div {
   padding: 10px;
-  font-weight: normal; 
+  font-weight: normal;
   cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
 }
 .input-group-items div:hover {
   /*when hovering an item:*/
-  background-color: #e9e9e9; 
+  background-color: #e9e9e9;
 }
 .input-group-active {
   /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
+  background-color: DodgerBlue !important;
+  color: #ffffff;
 }
 
 #searchbar {

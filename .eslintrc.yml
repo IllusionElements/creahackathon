@@ -1,0 +1,12 @@
+extends: airbnb-base
+rules:
+  semi: false
+settings:
+  import/resolver:
+    meteor:
+      extensions:
+        # if unset, default is just '.js', but it must be re-added explicitly if set
+        - .js
+        - .jsx
+        - .es6
+        - .coffee

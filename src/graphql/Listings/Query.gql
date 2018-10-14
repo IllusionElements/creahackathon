@@ -1,0 +1,8 @@
+type City implements Node {
+  _id: ID!
+  city: String!
+}
+
+extend type Query {
+  uniqueCities: [String!]!
+}

@@ -1,0 +1,3 @@
+src/client/panda
+**/*.ts
+**/*.d.ts
