@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import PageTwo from "@/components/page2"
 import MapDisplay from "@/components/MapDisplay"
+import DetailDisplay from "@/components/detailPage"
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/map',
       name: 'Map',
       component: MapDisplay
+    },
+    {
+      path: '/detail',
+      name: 'Detail',
+      component: DetailDisplay
     }
   ]
 })
