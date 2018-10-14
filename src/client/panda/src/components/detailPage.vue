@@ -23,7 +23,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'HOLY CRAP THIS IS THE GOOGLE MAPPPPP'
+      msg: 'DETAIL'
     }
   },
   created() {

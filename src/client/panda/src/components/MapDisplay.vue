@@ -8,28 +8,28 @@
     <div class="w3-row-padding row" style="text-align: center; margin-top:40px; margin-bottom: 40px">
       <div class="w3-col m4 w3-center" id="location2">
         <div class="w3-card" style="width:100%">
-          <img src="../assets/PANDAAAA.jpg" style="width:100%">
+          <img class="displayimage" src="../assets/PANDAAAA.jpg" style="width:100%">
           <div class="w3-container">
-            <h4><b>PANDA</b></h4>
-            <p>The panda of the panda</p>
+            <h4 class="name"><b>PANDA</b></h4>
+            <p class="descrption">The panda of the panda</p>
           </div>
         </div>
       </div>
       <div class="w3-col m4 w3-center" id="location1">
         <div class="w3-card" style="width:100%">
-          <img src="../assets/PANDAAAA.jpg" style="width:100%">
+          <img class="displayimage" src="../assets/PANDAAAA.jpg" style="width:100%">
           <div class="w3-container">
-            <h4><b>PANDA</b></h4>
-            <p>The panda of the panda</p>
+            <h4 class="name"><b>PANDA</b></h4>
+            <p class="descrption">The panda of the panda</p>
           </div>
         </div>
       </div>
       <div class="w3-col m4 w3-center" id="location3">
         <div class="w3-card" style="width:100%">
-          <img src="../assets/PANDAAAA.jpg" style="width:100%">
+          <img class="displayimage" src="../assets/PANDAAAA.jpg" style="width:100%">
           <div class="w3-container">
-            <h4><b>PANDA</b></h4>
-            <p>The panda of the panda</p>
+            <h4 class="name"><b>PANDA</b></h4>
+            <p class="descrption">The panda of the panda</p>
           </div>
         </div>
       </div>
@@ -52,14 +52,20 @@ export default {
       data : this.$route.params.houseid,
       latlngArray : [],
       googleLatLng : [],
+      imageInfo: [],
+      housename: [],
+      housedes: [],
     }
-    this.vars.latlngArray[0] = {x: 51.508742, y: -0.120850}
+    this.vars.latlngArray[0] = {x: 51.508742, y: 6.300850}
     this.vars.latlngArray[1] = {x: 48.522382, y: -0.151292}
-    this.vars.latlngArray[2] = {x: 52.394490, y: -0.145968}
+    this.vars.latlngArray[2] = {x: 52.394490, y: 12.225968}
 
     for (var i = 0; i < this.vars.latlngArray.length; i++)
     {
       this.vars.googleLatLng[i] = new google.maps.LatLng(this.vars.latlngArray[i].x, this.vars.latlngArray[i].y)
+      this.vars.imageInfo[i] = "https://image.ibb.co/njaKzU/pandapointersmallpin.png";
+      this.vars.housename[i] = "THIS IS A PANDA";
+      this.vars.housedes[i] = "it is just a panda!!!";
     }
   },
   mounted() {
@@ -96,6 +102,18 @@ export default {
     markershadow.setMap(map);
     marker2.setMap(map);
     marker3.setMap(map);
+
+    //set up the house information to the box
+    var loc = [];
+    loc[0] = document.getElementById("location1");
+    loc[1] = document.getElementById("location2");
+    loc[2] = document.getElementById("location3");
+    for (var i = 0; i < loc.length; i++)
+    {
+      loc[i].getElementsByClassName('name')[0].textContent = this.vars.housename[i];
+      loc[i].getElementsByClassName('descrption')[0].textContent = this.vars.housedes[i];
+      loc[i].getElementsByClassName("displayimage")[0].setAttribute("src", this.vars.imageInfo[i]);
+    }
   },
 }
 </script>
