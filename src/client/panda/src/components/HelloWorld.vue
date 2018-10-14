@@ -42,16 +42,12 @@ export default {
       router.push(404page);
     )
     */
-
-    dontdoit() {
-      router.push({ name: "Page2"});
-    },
     goButtonClicked() {
       if (document.getElementById("searchbar").value != "") {
         // Extract input value (city) -> add to query
         console.log(document.getElementById("searchbar").value);
       }
-      router.push({ name: "Page2"});
+      router.push({ name: "Page2", params: { location : document.getElementById("searchbar").value}});
     }
   }
 }

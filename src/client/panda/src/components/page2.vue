@@ -61,6 +61,11 @@ export default {
       questions: questions
     }
   },
+  created() {
+    this.vars = {
+      location: this.$route.params.location,
+    }
+  },
   methods:{
     nextButtonClicked() {
       console.log("previous answer for q: " + questions[count].question + " is " + questions[count].answer);
