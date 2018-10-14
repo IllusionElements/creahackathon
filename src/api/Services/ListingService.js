@@ -10,11 +10,14 @@ export class ListingService {
 
   async cities() {
     const { aggregation } = await import('./aggregation')
-    const cities = await this.db.aggregate(aggregation(this.limit))
-    return cities.map(({ id: [id], city }) => ({
-      id,
+    const results = await this.db.aggregate(aggregation(this.limit)).toArray()
+    const cities = results.map(({ id: [id], city }) => ({
+      id: id.toString(),
       city,
     }))
+    return {
+      cities,
+    }
   }
 
   listing(ast) {

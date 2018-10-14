@@ -1,5 +1,5 @@
 import { defaultFieldResolver } from 'graphql'
-import { SchemaDirectiveVisitor } from 'graphql-tools'
+import { SchemaDirectiveVisitor } from 'apollo-server'
 
 const INT = 'INT'
 const FLOAT = 'FLOAT'

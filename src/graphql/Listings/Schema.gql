@@ -1,7 +1,6 @@
 type Listings implements Node @mongo(name: "listings") {
   _id: ID!
   ListingID: ID!
-  MLSNumber: String
   details: Details @link(to: "listing")
   scores: Score @link(to: "listings")
   MLSNumber: String!

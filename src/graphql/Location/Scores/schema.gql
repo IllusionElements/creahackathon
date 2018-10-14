@@ -1,26 +1,30 @@
-type Score {
+interface Median {
+  INCOME: String
+  SALE: String
+  DELTA: String
+}
+
+interface Lifestyle {
+  category: String
+  scoreRatio: Float
+}
+
+interface Statistics {
+  POP: Int
+  Homes_Sold: Int
+  Homes_Age: Int
+  averageAge: Float
+  median: Median
+}
+
+type Score @mongo(name: "enhancedLocationDetails") {
   _id: ID!
   DAUID: ID!
-  pedestrian_friendly: Int! @to(type: "INT")
-  transit_friendly: Int! @to(type: "INT")
-  car_friendly: Int! @to(type: "INT")
-  groceries: Int! @to(type: "INT")
-  primary_schools: Int! @to(type: "INT")
-  high_schools: Int! @to(type: "INT")
-  daycares: Int! @to(type: "INT")
-  parks: Int! @to(type: "INT")
-  restaurants: Int! @to(type: "INT")
-  cafes: Int! @to(type: "INT")
-  shopping: Int! @to(type: "INT")
-  nightlife: Int! @to(type: "INT")
-  quiet: Int! @to(type: "INT")
-  vibrant: Int! @to(type: "INT")
-  POP: Int! @to(type: "INT")
-  AVG_AGE: Float! @to(type: "FLOAT")
-  MED_INC: Float! @to(type: "FLOAT")
-  MED_SALE: Floa!
-  MED_DELTA: Floa!
-  HOMES_SOLD: Int! @to(type: "INT")
-  HOMES_AGE: Int! @to(type: "INT")
+  statistics: Statistics
+  lifestyle: Lifestyle
   listings: Listings @link(field: "ListingID")
+}
+
+type Query {
+  scores(listings: ID!): Score
 }

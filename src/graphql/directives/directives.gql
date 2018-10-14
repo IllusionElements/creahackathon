@@ -1,10 +1,8 @@
-directive bit ON FIELD_DECLARATION
+directive @bit on FIELD_DEFINITION
 
 enum NumberTypes {
   INT
   FLOAT
 }
 
-directive to(
-  type: NumberTypes!
-) ON FIELD_DECLARATION
+directive @to(type: NumberTypes!) on FIELD_DEFINITION

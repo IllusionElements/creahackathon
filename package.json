@@ -2,13 +2,14 @@
   "name": "crea",
   "private": true,
   "scripts": {
-    "start": "MONGO_URL=mongodb+srv://tempest:TBpRRRpbXKJ2VHh!@cluster0-rcjy9.mongodb.net/panda?retryWrites=true meteor run",
+    "start": "MONGO_URL=mongodb+srv://tempest:TBpRRRpbXKJ2VHh!@cluster0-rcjy9.mongodb.net/panda?retryWrites=true meteor run --settings settings-development.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.55",
+    "@material-ui/core": "^3.2.0",
     "@types/graphql": "^14.0.1",
     "apollo-cache-inmemory": "^1.3.5",
     "apollo-client": "^2.4.2",

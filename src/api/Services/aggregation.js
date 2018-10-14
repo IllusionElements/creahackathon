@@ -12,13 +12,11 @@ const $group = {
 // eslint-disable-next-line no-underscore-dangle
 const _id = DISABLE_FIELD
 const id = '$cityId'
-const cityId = DISABLE_FIELD
 const city = '$_id.city'
 
 const $project = {
   _id,
   id,
-  cityId,
   city,
 }
 

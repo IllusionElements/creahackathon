@@ -1,5 +1,6 @@
 type City implements Node {
   id: ID!
+  _id: ID!
   city: String!
 }
 
@@ -22,14 +23,14 @@ enum ScoreTypes {
   AGE
 }
 
-input Score {
+input Scores {
   key: ScoreTypes
   value: Int
 }
 
 extend type Query {
   uniqueCities: [City!]!
-  findListing(id: ID!): [Listing!]!
-  getAllListings: [Listing!]!
-  listingBasedOnScores(scores: [Score]): [Listing]
+  findListing(id: ID!): [Listings!]!
+  getAllListings: [Listings!]!
+  listingBasedOnScores(scores: [Scores]): [Listings]
 }
