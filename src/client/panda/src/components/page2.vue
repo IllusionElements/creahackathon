@@ -36,19 +36,19 @@ var q2 = {
   optional: false
 };
 
-// var q3 = {
-//   question: "Size of Yard",
-//   options: ["Large","Medium","Small"],
-//   answer: [],
-//   optional: false
-// };
+var q3 = {
+  question: "Size of Yard",
+  options: ["Large","Medium","Small"],
+  answer: [],
+  optional: false
+};
 
-// var q4 = {
-//   question: "Network Connectivity",
-//   options: ["Strong","Weak"],
-//   answer: [],
-//   optional: false
-// };
+var q4 = {
+  question: "Network Connectivity",
+  options: ["Strong","Weak"],
+  answer: [],
+  optional: false
+};
 
 var q5 = {
   question: "How many bathrooms do you need?",
