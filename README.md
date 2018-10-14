@@ -8,6 +8,9 @@
 - JavaScript
 - Bootstrap
 - Node.js
+- Apollo.js
+- GraphQL
+- React.js
 
 #### Idea: ![](https://github.com/IllusionElements/creahackathon/blob/master/readmepic/pandapointersmall.gif)
 - Choice, Choice and Choice

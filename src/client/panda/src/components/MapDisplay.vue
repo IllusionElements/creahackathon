@@ -43,7 +43,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Location details'
+      msg: 'Here are your results,'
     }
   },
   created() {

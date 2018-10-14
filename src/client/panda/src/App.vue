@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header><a v-on:click="homepage()" style="color:#ffffff">-HOME-</a></header>
+    <header><a v-on:click="homepage()" style="color:#ffffff;padding:10px;">HOME</a></header>
     <router-view/>
     <img src="./assets/pandabottom.png" width="100%"/>
   </div>
