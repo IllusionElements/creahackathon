@@ -193,6 +193,7 @@ a {
 }
 .input-group-items div {
   padding: 10px;
+  font-weight: normal; 
   cursor: pointer;
   background-color: #fff; 
   border-bottom: 1px solid #d4d4d4; 
