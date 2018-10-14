@@ -1,54 +1,30 @@
-enum Fields {
-  VALUE
-  TEXT
-  DESCRIPTION
-  CATEGORY
-  NAME
+interface Median {
+  INCOME: String
+  SALE: String
+  DELTA: String
 }
 
-enum Locale {
-  EN
-  FR
+interface Lifestyle {
+  category: String
+  scoreRatio: Float
 }
 
-enum Category {
-  Transportation
+interface Statistics {
+  POP: Int
+  Homes_Sold: Int
+  Homes_Age: Int
+  averageAge: Float
+  median: Median
 }
 
-interface Attribute {
-  type: String
-  value: Float
-  text: String
-  description: String
-  category: CATEGORY
+type Score @mongo(name: "enhancedLocationDetails") {
+  _id: ID!
+  DAUID: ID!
+  statistics: Statistics
+  lifestyle: Lifestyle
+  listings: Listings @link(field: "ListingID")
 }
 
-interface Link {
-  id: ID!
-  paths: [String]
-}
-
-
-type Meta {
-  nearby: [String!]!
-  around: [String!]!
-}
-
-type Score {
-  type: String
-  attributes: [Attribute]
-  links: Link
-  meta: Meta
-}
-
-# {
-#     lat: 45.5656,
-#     lng: -73.5656,
-#     include: 'transit_friendly,quiet',
-#     fields: 'value,text,description,category,name',
-#     locale: 'en'
-#   }
-
-extend type Query {
-  score:
+type Query {
+  scores(listings: ID!): Score
 }

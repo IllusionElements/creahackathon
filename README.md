@@ -16,3 +16,6 @@
 - Choice, Choice and Choice
 - Give users option but don't really consider those variables
 - Giving an illusion of choices
+=======
+![](https://github.com/IllusionElements/creahackathon/blob/master/readmepic/pandaicon.png)
+

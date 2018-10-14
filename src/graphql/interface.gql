@@ -1,0 +1,17 @@
+interface Node {
+  _id: ID!
+}
+
+interface Geo {
+  x: Int!
+  y: Int!
+}
+
+type Details @mongo(name: "enhancedLocationDetails") {
+  _id: ID!
+  listing: Listings @link(field: "ListingID")
+}
+
+interface Geography {
+  x: Int!
+}

@@ -3,6 +3,7 @@
     <header><a v-on:click="homepage()" style="color:#ffffff;padding:10px;">HOME</a></header>
     <router-view/>
     <img src="./assets/pandabottom.png" width="100%"/>
+    <h4 id="foot">© panda squad</h4>
   </div>
   
 </template>
