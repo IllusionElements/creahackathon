@@ -50,7 +50,7 @@ var count = 0
    q2, q1, q3, q4
  ];
 
- var message = "I told you not to click on this what the hell are you doing!!!"
+ var message = ""
 
 
 export default {
