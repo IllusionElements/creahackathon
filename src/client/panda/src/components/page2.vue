@@ -10,7 +10,8 @@
 
       <br/>
 
-      <button type="button" class="btn btn-info" v-on:click="nextButtonClicked()" id="nextbutton">Next</button>
+      <button type="button" class="btn btn-primary btn-outline btn-lg" v-on:click="nextButtonClicked()" id="nextbutton">Next</button>
+      <button type="button" class="btn btn-primary btn-outline btn-lg" v-on:click="bothButtonClicked()" id="bothbutton">Both</button>
       <button type="button" class="btn btn-primary btn-outline btn-lg" v-on:click="showButtonClicked()" id="showbutton">Show</button>
     </div>
 
@@ -20,34 +21,68 @@
 <script>
 import router from "../router"
 
+
 var q1 = {
-  question: "Bedrooms",
+  question: "How many bedrooms do you need?",
   options: ["1","2","3","4","5"],
-  answer: "wrong answer"
+  answer: [],
+  optional: false
 };
 
 var q2 = {
   question: "Pool",
   options: ["Yes","No"],
-  answer: "wrong answer"
+  answer: [],
+  optional: false
 };
 
 var q3 = {
   question: "Size of Yard",
   options: ["Large","Medium","Small"],
-  answer: "wrong answer"
+  answer: [],
+  optional: false
 };
 
 var q4 = {
   question: "Network Connectivity",
   options: ["Strong","Weak"],
-  answer: "wrong answer"
+  answer: [],
+  optional: false
 };
+
+var q5 = {
+  question: "How many bathrooms do you need?",
+  options: ["1","2","3","4","5"],
+  answer: [],
+  optional: true
+};
+
+var q6 = {
+  question: "Do you prefer a stroll down the street or to a park?",
+  options: ["Street","Park"],
+  answer: [],
+  optional: true
+};
+
+var q7 = {
+  question: "Do you have children?",
+  options: ["Yes","No"],
+  answer: [],
+  optional: true
+};
+
+var q8 = {
+  question: "Do you take public transit or drive to work?",
+  options: ["Public Transit","Drive"],
+  answer: [],
+  optional: true
+};
+
 
 var count = 0
 
  var questions = [
-   q2, q1, q3, q4
+   q2, q1, q3, q4, q5, q6, q7, q8
  ];
 
  var message = ""
@@ -68,12 +103,23 @@ export default {
   },
   methods:{
     nextButtonClicked() {
-      console.log("previous answer for q: " + questions[count].question + " is " + questions[count].answer);
+      console.log("previous answer for q: " + questions[count].question + " is a:" + questions[count].answer);
 
       var selectDrop = document.getElementById("optionsDrop");
-      questions[count].answer = selectDrop.value;
+      questions[count].answer = [selectDrop.value];
 
-      console.log("current answer for q: " + questions[count].question + " is " + questions[count].answer);
+      console.log("current answer for q: " + questions[count].question + " is a:" + questions[count].answer);
+
+      nextQuestion();
+    },
+    bothButtonClicked() {
+      console.log("previous answer for q: " + questions[count].question + " is a:" + questions[count].answer);
+
+      var selectDrop = document.getElementById("optionsDrop");
+      questions[count].answer = questions[count].options;
+
+      console.log("current answer for q: " + questions[count].question + " is a:" + questions[count].answer);
+
       nextQuestion();
     },
     showButtonClicked() {
@@ -148,7 +194,9 @@ li {
 #showbutton {
   height:45px;
   width:100px;
-  /* background-color: red;
-  border-color: red; */
+}
+#bothbutton {
+  height:45px;
+  width:100px;
 }
 </style>
