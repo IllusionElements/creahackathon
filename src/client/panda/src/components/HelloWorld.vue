@@ -14,7 +14,6 @@
       </div>
     </div>
     </form>
-    <h4 id="foot">© panda squad</h4>
   </div>
 </template>
 
@@ -204,9 +203,6 @@ a {
 #gobutton {
   height:45px;
   width:100px;
-}
-#foot {
-  margin-top: 300px;
 }
 
 </style>
