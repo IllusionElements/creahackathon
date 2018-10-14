@@ -1,6 +1,0 @@
-query getCityList {
-  uniqueCities {
-    _id
-    city
-  }
-}

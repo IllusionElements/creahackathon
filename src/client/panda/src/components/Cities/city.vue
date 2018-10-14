@@ -11,7 +11,7 @@
   const cities = {
     validator: (value) =>
       value.every(
-        ({ _id, city }) => typeof _id === 'string' && typeof city === 'string'
+        ({ id, city }) => typeof _id === 'string' && typeof city === 'string'
       )
   }
 
